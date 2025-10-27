@@ -11,13 +11,14 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
     </style>
     <script>
-        // Tailwind Custom Configuration
+        // Tailwind Custom Configuration - Updated with Branding Guide Colors
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'vyapaar-blue': '#312e81', // Deep Indigo - Core Brand Color
-                        'vyapaar-light': '#4f46e5', // Indigo-600
+                        'vyapaar-deep-blue': '#111871', // Deep Blue
+                        'vyapaar-nord-blue': '#1A2DD8', // Nord Blue (Primary Accent)
+                        'vyapaar-aqua-blue': '#1888FB', // Aqua Blue
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -62,15 +63,17 @@
     <!-- Header / Navigation -->
     <header class="bg-white shadow-md sticky top-0 z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-extrabold text-vyapaar-blue tracking-tighter">
-                <span class="inline-block align-middle rounded-full p-1 bg-vyapaar-blue text-white mr-2">V</span>Vyapaar.AI
+            <!-- Logo Updated with image_c94e84.jpg -->
+            <h1 class="text-2xl font-extrabold text-vyapaar-deep-blue tracking-tighter flex items-center">
+                <img src="assets/logo.jpeg" alt="Vyapaar.AI Logo V" class="w-8 h-8 mr-2 rounded-lg object-cover" onerror="this.onerror=null; this.src='https://placehold.co/32x32/111871/FFFFFF?text=V';">
+                Vyapaar.AI
             </h1>
             <nav class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="#problem" class="text-gray-600 hover:text-vyapaar-light transition duration-150">The Problem</a>
-                <a href="#agent" class="text-gray-600 hover:text-vyapaar-light transition duration-150">Agentic AI</a>
-                <a href="#fintech" class="text-gray-600 hover:text-vyapaar-light transition duration-150">Fintech Core</a>
+                <a href="#problem" class="text-gray-600 hover:text-vyapaar-nord-blue transition duration-150">The Problem</a>
+                <a href="#agent" class="text-gray-600 hover:text-vyapaar-nord-blue transition duration-150">Agentic AI</a>
+                <a href="#fintech" class="text-gray-600 hover:text-vyapaar-nord-blue transition duration-150">Fintech Core</a>
             </nav>
-            <a href="#cta" class="bg-vyapaar-light hover:bg-vyapaar-blue text-white px-4 py-2 rounded-lg text-sm font-semibold shadow-md transition duration-300 transform hover:scale-105">
+            <a href="#cta" class="bg-vyapaar-nord-blue hover:bg-vyapaar-deep-blue text-white px-4 py-2 rounded-lg text-sm font-semibold shadow-md transition duration-300 transform hover:scale-105">
                 Request Demo
             </a>
         </div>
@@ -78,20 +81,20 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="py-16 md:py-28 bg-vyapaar-blue/5 border-b border-vyapaar-blue/10">
+        <section id="hero" class="py-16 md:py-28 bg-vyapaar-deep-blue/5 border-b border-vyapaar-deep-blue/10">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
                 <!-- Text Content -->
                 <div class="md:order-1">
-                    <p class="text-vyapaar-light font-semibold mb-3 text-lg">Agentic Financial & Sales Advisor</p>
+                    <p class="text-vyapaar-nord-blue font-semibold mb-3 text-lg">Agentic Financial & Sales Advisor</p>
                     <h2 class="text-5xl md:text-6xl font-extrabold leading-tight text-gray-900 mb-6">
                         Your CFO, Sales Planner, and Ops Manager.
-                        <span class="block text-vyapaar-blue">Just a Phone Call Away.</span>
+                        <span class="block text-vyapaar-deep-blue">Just a Phone Call Away.</span>
                     </h2>
                     <p class="text-xl text-gray-600 mb-8">
                         Vyapaar.AI is the agentic system built for shop owners. No dashboards, no spreadsheets—just pick up the phone, ask, and watch it act on your behalf.
                     </p>
                     <div id="cta" class="flex flex-col sm:flex-row gap-4">
-                        <button onclick="copyText('vyapaar-phone', 'copy-message')" class="bg-vyapaar-blue text-white px-8 py-4 rounded-xl text-lg font-bold shadow-xl shadow-vyapaar-blue/30 transition duration-300 transform hover:scale-[1.02]">
+                        <button onclick="copyText('vyapaar-phone', 'copy-message')" class="bg-vyapaar-nord-blue text-white px-8 py-4 rounded-xl text-lg font-bold shadow-xl shadow-vyapaar-nord-blue/30 transition duration-300 transform hover:scale-[1.02]">
                             Call Our Demo Line (Coming Soon!)
                         </button>
                         <p id="vyapaar-phone" class="sr-only">+91 98765 43210</p>
@@ -105,7 +108,7 @@
                 <!-- Image/Visual Mockup (Based on image_c8da62.jpg) -->
                 <div class="md:order-2 flex justify-center items-center relative p-6 bg-white rounded-2xl shadow-2xl">
                     <!-- Placeholder representing the phone conversation -->
-                    <img src="https://placehold.co/600x400/312e81/ffffff?text=Your+AI+Store+Advisor.%5CnJust+Ask." alt="Mockup of a phone conversation with Vyapaar AI on an old Nokia and a modern smartphone." class="w-full h-auto rounded-xl" onerror="this.src='https://placehold.co/600x400/312e81/ffffff?text=Your+AI+Store+Advisor.%5CnJust+Ask.'">
+                    <img src="assets/hero.png" alt="Mockup of a phone conversation with Vyapaar AI on an old Nokia and a modern smartphone." class="w-full h-auto rounded-xl">
                     <p class="absolute top-4 right-4 text-xs text-gray-500">Visual based on image_c8da62.jpg</p>
                 </div>
             </div>
@@ -120,17 +123,17 @@
                 </div>
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition duration-300">
-                        <div class="text-4xl text-vyapaar-light mb-4">💰</div>
+                        <div class="text-4xl text-vyapaar-nord-blue mb-4">💰</div>
                         <h5 class="text-xl font-semibold mb-3">Cash is Locked Up</h5>
                         <p class="text-gray-600">Buying too much stock means working capital is tied up, leading to cash flow crunches, especially before busy seasons.</p>
                     </div>
                     <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition duration-300">
-                        <div class="text-4xl text-vyapaar-light mb-4">🛒</div>
+                        <div class="text-4xl text-vyapaar-nord-blue mb-4">🛒</div>
                         <h5 class="text-xl font-semibold mb-3">Missed Sales</h5>
                         <p class="text-gray-600">Running out of fast-moving items (empty shelves) results in unhappy customers and lost revenue—a direct financial hit.</p>
                     </div>
                     <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200 hover:shadow-xl transition duration-300">
-                        <div class="text-4xl text-vyapaar-light mb-4">📉</div>
+                        <div class="text-4xl text-vyapaar-nord-blue mb-4">📉</div>
                         <h5 class="text-xl font-semibold mb-3">Data Overload, Zero Insight</h5>
                         <p class="text-gray-600">Sales and inventory data exist, but shop owners lack the time, skills, or tools to turn it into proactive, profitable decisions.</p>
                     </div>
@@ -139,56 +142,56 @@
         </section>
 
         <!-- The Solution: Agentic AI Core -->
-        <section id="agent" class="py-20 bg-vyapaar-blue text-white">
+        <section id="agent" class="py-20 bg-vyapaar-deep-blue text-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h3 class="text-sm font-semibold uppercase text-indigo-300 tracking-wider mb-2">The Vyapaar.AI Difference</h3>
                     <h4 class="text-3xl md:text-4xl font-bold">An Agent That Thinks Ahead and Acts.</h4>
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <!-- Feature Card 1: Inventory Management -->
+                    <!-- Feature Card 1: Inventory Management (Markdown fixed) -->
                     <div class="bg-white text-gray-800 p-6 rounded-xl shadow-2xl transform hover:-translate-y-1 transition duration-300">
-                        <h5 class="text-xl font-bold mb-3 text-vyapaar-blue">Proactive Ordering</h5>
+                        <h5 class="text-xl font-bold mb-3 text-vyapaar-nord-blue">Proactive Ordering</h5>
                         <p class="mb-4 text-gray-600">
-                            **Ask:** "What should I order this week?"
+                            <b>Ask:</b> "What should I order this week?"
                             <br>
-                            **Agent Action:** Tells you the exact stock quantity needed based on real-time sales velocity and predicted demand.
+                            <b>Agent Action:</b> Tells you the exact stock quantity needed based on real-time sales velocity and predicted demand.
                         </p>
                     </div>
-                    <!-- Feature Card 2: Financial Alerts -->
+                    <!-- Feature Card 2: Financial Alerts (Markdown fixed) -->
                     <div class="bg-white text-gray-800 p-6 rounded-xl shadow-2xl transform hover:-translate-y-1 transition duration-300">
-                        <h5 class="text-xl font-bold mb-3 text-vyapaar-blue">Risk & Opportunity Warnings</h5>
+                        <h5 class="text-xl font-bold mb-3 text-vyapaar-nord-blue">Risk & Opportunity Warnings</h5>
                         <p class="mb-4 text-gray-600">
-                            **Proactive Warning:** "Stock up, demand for milk will rise by 39% for the Diwali weekend."
+                            <b>Proactive Warning:</b> "Stock up, demand for milk will rise by 39% for the Diwali weekend."
                             <br>
-                            **Agent Action:** Sends reminders and pre-approves order drafts for you.
+                            <b>Agent Action:</b> Sends reminders and pre-approves order drafts for you.
                         </p>
                     </div>
-                    <!-- Feature Card 3: Direct Action -->
+                    <!-- Feature Card 3: Direct Action (Markdown fixed) -->
                     <div class="bg-white text-gray-800 p-6 rounded-xl shadow-2xl transform hover:-translate-y-1 transition duration-300">
-                        <h5 class="text-xl font-bold mb-3 text-vyapaar-blue">Autonomous Action</h5>
+                        <h5 class="text-xl font-bold mb-3 text-vyapaar-nord-blue">Autonomous Action</h5>
                         <p class="mb-4 text-gray-600">
-                            **You Say:** "Sounds good, please place an order for it."
+                            <b>You Say:</b> "Sounds good, please place an order for it."
                             <br>
-                            **Agent Action:** Automatically places the order with the verified vendor using pre-set account details.
+                            <b>Agent Action:</b> Automatically places the order with the verified vendor using pre-set account details.
                         </p>
                     </div>
-                    <!-- Feature Card 4: Sales Summary -->
+                    <!-- Feature Card 4: Sales Summary (Markdown fixed) -->
                     <div class="bg-white text-gray-800 p-6 rounded-xl shadow-2xl transform hover:-translate-y-1 transition duration-300">
-                        <h5 class="text-xl font-bold mb-3 text-vyapaar-blue">Simple Financial Summary</h5>
+                        <h5 class="text-xl font-bold mb-3 text-vyapaar-nord-blue">Simple Financial Summary</h5>
                         <p class="mb-4 text-gray-600">
-                            **Ask:** "How are my sales this month?"
+                            <b>Ask:</b> "How are my sales this month?"
                             <br>
-                            **Agent Action:** Gives a concise, clear summary of key metrics and profit without confusing jargon.
+                            <b>Agent Action:</b> Gives a concise, clear summary of key metrics and profit without confusing jargon.
                         </p>
                     </div>
-                    <!-- Feature Card 5: Local Recommendations -->
+                    <!-- Feature Card 5: Local Recommendations (Markdown fixed) -->
                     <div class="bg-white text-gray-800 p-6 rounded-xl shadow-2xl transform hover:-translate-y-1 transition duration-300">
-                        <h5 class="text-xl font-bold mb-3 text-vyapaar-blue">Product Discovery</h5>
+                        <h5 class="text-xl font-bold mb-3 text-vyapaar-nord-blue">Product Discovery</h5>
                         <p class="mb-4 text-gray-600">
-                            **Agent Suggests:** "A nearby shop is successfully selling Product X. You should try ordering 10 units."
+                            <b>Agent Suggests:</b> "A nearby shop is successfully selling Product X. You should try ordering 10 units."
                             <br>
-                            **Agent Action:** Finds new, relevant products based on local market data.
+                            <b>Agent Action:</b> Finds new, relevant products based on local market data.
                         </p>
                     </div>
                 </div>
@@ -210,7 +213,7 @@
                     </div>
                     <!-- Multilingual Image Placeholder (Based on image_c8da68.png) -->
                     <div class="md:order-2 flex justify-center p-4">
-                        <img src="https://placehold.co/600x300/f5f5f5/312e81?text=Multilingual+Conversation+Bubbles" alt="Speech bubbles showing questions in multiple Indian languages for Vyapaar.AI." class="w-full h-auto rounded-lg border border-gray-200" onerror="this.src='https://placehold.co/600x300/f5f5f5/312e81?text=Multilingual+Conversation+Bubbles'">
+                        <img src="https://placehold.co/600x300/f5f5f5/111871?text=Multilingual+Conversation+Bubbles" alt="Speech bubbles showing questions in multiple Indian languages for Vyapaar.AI." class="w-full h-auto rounded-lg border border-gray-200" onerror="this.src='https://placehold.co/600x300/f5f5f5/111871?text=Multilingual+Conversation+Bubbles'">
                         <p class="absolute bottom-4 right-4 text-xs text-gray-400">Visual based on image_c8da68.png</p>
                     </div>
                 </div>
@@ -236,18 +239,18 @@
 
         <!-- Fintech Core Section -->
         <section id="fintech" class="py-20">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-white p-10 rounded-2xl shadow-2xl border-t-4 border-vyapaar-light">
-                <h3 class="text-sm font-semibold uppercase text-vyapaar-light tracking-wider mb-3">Our Core Fintech Mission</h3>
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-white p-10 rounded-2xl shadow-2xl border-t-4 border-vyapaar-nord-blue">
+                <h3 class="text-sm font-semibold uppercase text-vyapaar-nord-blue tracking-wider mb-3">Our Core Fintech Mission</h3>
                 <h4 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                    Giving Every Shopkeeper a <span class="text-vyapaar-blue">Personal CFO</span>.
+                    Giving Every Shopkeeper a <span class="text-vyapaar-deep-blue">Personal CFO</span>.
                 </h4>
                 <p class="text-xl text-gray-600 mb-4">
-                    Vyapaar.AI is fundamentally a Fintech solution. It directly solves the biggest financial struggle of small shops: **cash flow and inventory management.**
+                    Vyapaar.AI is fundamentally a Fintech solution. It directly solves the biggest financial struggle of small shops: <b>cash flow and inventory management.</b>
                 </p>
                 <ul class="list-disc list-inside text-left text-lg text-gray-700 space-y-2 mt-8 max-w-xl mx-auto">
-                    <li>Coaches on **smarter spending** to optimize cash cycles.</li>
-                    <li>Proactively alerts to financial risks like **overstocking or stockouts.**</li>
-                    <li>**Automates procurement** (action) to prevent money being tied up or sales being missed.</li>
+                    <li>Coaches on <b>smarter spending</b> to optimize cash cycles.</li>
+                    <li>Proactively alerts to financial risks like <b>overstocking or stockouts.</b></li>
+                    <li><b>Automates procurement</b> (action) to prevent money being tied up or sales being missed.</li>
                 </ul>
             </div>
         </section>
@@ -257,13 +260,15 @@
     <footer class="bg-gray-800 text-white mt-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
             <div class="md:flex md:justify-between md:items-center">
-                <h2 class="text-3xl font-extrabold text-white tracking-tighter mb-4 md:mb-0">
-                    <span class="inline-block align-middle rounded-full p-1 bg-vyapaar-light text-white mr-2">V</span>Vyapaar.AI
+                <!-- Logo Updated with image_c94e84.jpg -->
+                <h2 class="text-3xl font-extrabold text-white tracking-tighter flex items-center mb-4 md:mb-0">
+                    <img src="assets/logo.jpeg" alt="Vyapaar.AI Logo V" class="w-8 h-8 mr-2 rounded-lg object-cover" onerror="this.onerror=null; this.src='https://placehold.co/32x32/111871/FFFFFF?text=V';">
+                    Vyapaar.AI
                 </h2>
                 <div class="flex space-x-6 text-sm">
-                    <a href="#hero" class="text-gray-300 hover:text-vyapaar-light transition duration-150">Home</a>
-                    <a href="#" class="text-gray-300 hover:text-vyapaar-light transition duration-150">Privacy Policy</a>
-                    <a href="#" class="text-gray-300 hover:text-vyapaar-light transition duration-150">Terms of Service</a>
+                    <a href="#hero" class="text-gray-300 hover:text-vyapaar-nord-blue transition duration-150">Home</a>
+                    <a href="#" class="text-gray-300 hover:text-vyapaar-nord-blue transition duration-150">Privacy Policy</a>
+                    <a href="#" class="text-gray-300 hover:text-vyapaar-nord-blue transition duration-150">Terms of Service</a>
                 </div>
             </div>
             <div class="mt-8 border-t border-gray-700 pt-8">
